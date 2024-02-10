@@ -1,1 +1,10 @@
-{% extends 'core/base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% load static %}{% static 'img/home-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Jose Luis Díaz</h1>
+<span class="subheading">Ingeniero Sistemas</span>
+{% endblock %}
