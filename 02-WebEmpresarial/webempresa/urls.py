@@ -28,5 +28,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Paths de blog
     path('blog/', include('blog.urls')),
+    # Paths de pages
+    path('page/', include('pages.urls')),
+    # Paths de Contacto
+    path('contact/', include('contact.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #muestra las imagenes
