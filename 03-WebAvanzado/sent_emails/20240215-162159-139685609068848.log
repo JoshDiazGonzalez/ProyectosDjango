@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: correo1@correo.com
+Date: Thu, 15 Feb 2024 16:21:59 -0000
+Message-ID: <170801411924.9526.8826361390449577187@Latitude-E6400>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Mg/c2g5gn-527d2da7eb4d8b480cf6f07988ebb76a/
+
+Your username, in case you’ve forgotten: pepito
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
