@@ -34,3 +34,9 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #muestra las imagenes
+
+
+#Custom titles for header
+admin.site.site_header = "La CAffetiera"
+admin.site.index_title = "Panel de administrador"
+admin.site.site_title = "La Caffetiera"
