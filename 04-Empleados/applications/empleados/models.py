@@ -27,7 +27,8 @@ class Empleado(models.Model):
     #Contador
     #Administrador
     #Economista
-    #Otro
+    #clear
+    
     first_name = models.CharField('Nombres', max_length=50)
     last_name = models.CharField('Apellidos', max_length=50)
     full_name = models.CharField(
