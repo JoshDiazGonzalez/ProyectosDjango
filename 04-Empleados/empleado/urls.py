@@ -7,4 +7,5 @@ urlpatterns = [
     path('', include('applications.home.urls')),
     #incluimos la url de la app departamento
     re_path('', include('applications.empleados.urls')),
+    re_path('', include('applications.departamento.urls')),
 ]

@@ -13,6 +13,8 @@ from django.views.generic import(
 
 #modelos
 from .models import Empleado
+#forms
+from .forms import EmpleadoForm
 
 # Create your views here.
 #esta vista sirve para mostrar todos los elementos
@@ -82,14 +84,15 @@ class SuccessView(TemplateView):
 class EmpleadoCreateView(CreateView):
     template_name = "persona/add.html"
     model = Empleado
+    form_class = EmpleadoForm
     success_url = reverse_lazy('persona_app:correcto')
-    fields = [
-        'first_name',
-        'last_name',
-        'job',
-        'departamento',
-        'habilidades',
-    ]
+    #fields = [
+    #    'first_name',
+    #    'last_name',
+    #    'job',
+    #    'departamento',
+    #    'habilidades',
+    #]
     success_url = reverse_lazy('persona_app:correcto')
 
     def form_valid(self, form):
