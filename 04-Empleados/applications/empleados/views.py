@@ -17,6 +17,10 @@ from .models import Empleado
 from .forms import EmpleadoForm
 
 # Create your views here.
+class InicioView(TemplateView):
+    """ vista qeu carga la pagina de inicio"""
+    template_name = 'inicio.html'
+    
 #esta vista sirve para mostrar todos los elementos
 class ListAllEmpleados(ListView):
     template_name = 'persona/list_all.html'
