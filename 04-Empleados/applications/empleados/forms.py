@@ -13,4 +13,4 @@ class EmpleadoForm(forms.ModelForm):
             'departamento',
             'avatar',
             'habilidades',
-        )
+        ),

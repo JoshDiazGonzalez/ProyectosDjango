@@ -1,8 +1,52 @@
-<h1>Lista empleados por departamento</h1>
+{% extends 'base.html' %}
 
+{% block title %}
+  lista empelados por departamento
+{% endblock title %}
+
+{% block content %}
+  {% include "includes/header.html" %}
+
+  <div class="container">
+      <div class="row">
+        <h2 class="mt-3">Empelados por area:</h2>
+        <div class="row">
+            <table class="table mt-10">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">NOMBRES</th>
+                    <th scope="col">APELLIDOS</th>
+                    <th scope="col">DEPARTAMENTO</th>
+                    <th scope="col">ACCION</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for e in empleados %}
+                <tr>
+                    <td>{{e.id}}</td>
+                    <td>{{e.first_name}}</td>
+                    <td>{{e.last_name}}</td>
+                    <td>{{e.departamento}}</td>
+                    <td><a class="btn btn-primary" href="{% url 'persona_app:empleado_detail' e.id %}" role="button">Ver</a></td>
+                </tr> 
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+      </div>
+  </div>
+
+
+{% endblock content %}
+
+<h1>Lista empelados por departamento</h1>
 
 <ul>
-    {% for e in  object_list %}
-        <li>{{e}}</li>
+    
+    {% for e in object_list  %}
+        <li>{{ e }}</li>
     {% endfor %}
+        
 </ul>

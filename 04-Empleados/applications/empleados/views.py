@@ -25,13 +25,14 @@ class InicioView(TemplateView):
 class ListAllEmpleados(ListView):
     template_name = 'persona/list_all.html'
     #agregando paginacion para alivaniar el server
-    paginate_by = 2
+    paginate_by = 4
     ordering = 'first_name'
     context_object_name = 'empleados'
 
     def get_queryset(self):
         palabra_clave = self.request.GET.get("kword", '')
         lista = Empleado.objects.filter(
+            #icontains busca con la primera letra
             full_name__icontains=palabra_clave
         )
         return lista
@@ -48,6 +49,15 @@ class ListByAreaEmpleado(ListView):
         departamento__shor_name=area
     )
         return lista
+    
+
+#vista del administrador
+class ListaEmpleadosAdmin(ListView):
+    template_name = 'persona/lista_empleados.html'
+    paginate_by = 10
+    ordering = 'first_name'
+    context_object_name = 'empleados'
+    model = Empleado
 
 class ListEmpleadosByKword(ListView):
     """ lista empleado por palabra clave"""
@@ -117,7 +127,7 @@ class EmpleadoUpdateView(UpdateView):
         'departamento',
         'habilidades',
     ]
-    success_url = reverse_lazy('persona_app:empleados_all')
+    success_url = reverse_lazy('persona_app:empleados_admin') 
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
