@@ -50,12 +50,12 @@ class ListByAreaEmpleado(ListView):
     
 
 #vista del administrador
-class ListaEmpleadosAdmin(ListView):
-    template_name = 'persona/lista_empleados.html'
-    paginate_by = 10
-    ordering = 'first_name'
-    context_object_name = 'empleados'
-    model = Empleado
+#class ListaEmpleadosAdmin(ListView):
+    #template_name = 'persona/lista_empleados.html'
+    #paginate_by = 10
+    #ordering = 'first_name'
+    #context_object_name = 'empleados'
+    #model = Empleado
 
 class ListEmpleadosByKword(ListView):
     """ lista empleado por palabra clave"""
