@@ -1,5 +1,3 @@
-from django.forms import BaseModelForm
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import(
@@ -99,7 +97,7 @@ class EmpleadoCreateView(CreateView):
     template_name = "persona/add.html"
     model = Empleado
     form_class = EmpleadoForm
-    success_url = reverse_lazy('persona_app:correcto')
+    success_url = reverse_lazy('persona_app:empleados_admin')
     #fields = [
     #    'first_name',
     #    'last_name',
@@ -107,7 +105,7 @@ class EmpleadoCreateView(CreateView):
     #    'departamento',
     #    'habilidades',
     #]
-    success_url = reverse_lazy('persona_app:correcto')
+    #success_url = reverse_lazy('persona_app:correcto')
 
     def form_valid(self, form):
         #logica del proceso
@@ -148,4 +146,4 @@ class EmpleadoUpdateView(UpdateView):
 class EmpleadoDeleteView(DeleteView):
     model = Empleado
     template_name = "persona/delete.html"
-    success_url = reverse_lazy('persona_app:empleados_all')
+    success_url = reverse_lazy('persona_app:empleados_admin')

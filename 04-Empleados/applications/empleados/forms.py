@@ -14,3 +14,6 @@ class EmpleadoForm(forms.ModelForm):
             'avatar',
             'habilidades',
         ),
+        widgets = {
+            'habilidades': forms.CheckboxSelectMultiple()
+        }
